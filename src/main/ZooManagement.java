@@ -13,11 +13,11 @@ public class ZooManagement {
         lion.setFamily("Lion");
         lion.setIsMammal(true);
 
-        Zoo myZoo = new Zoo("Wildlife Park", "Ariana");
-        Zoo notMyZoo = new Zoo("WaterPark", "Siliana");
+        Zoo myZoo = new Zoo("RRRRR", "Sousse");
+        Zoo notMyZoo = new Zoo("Gym Park", "New York");
 
 
-        Animal dog = new Animal("Canine", "Snoopy", 2, true);
+        Animal dog = new Animal("Rajhi", "Snoopy", 2, true);
 
 
         System.out.println(myZoo.addAnimal(lion));
@@ -26,18 +26,20 @@ public class ZooManagement {
         myZoo.displayAnimals();
 
         System.out.println(myZoo.searchAnimal(dog));
+
         Animal dog2 = new Animal("Canine", "lll", 2, true);
+
         System.out.println(myZoo.searchAnimal(dog2));
 
-        //   System.out.println(myZoo.removeAnimal(dog));
         myZoo.displayAnimals();
 
 
         System.out.println(myZoo);
 
         myZoo.addAnimal(lion);
-        myZoo.addAnimal(dog);
         myZoo.addAnimal(dog2);
+        myZoo.addAnimal(dog);
+
         myZoo.displayAnimals();
         System.out.println("a" + myZoo.removeAnimal(lion));
         myZoo.displayAnimals();
@@ -46,17 +48,10 @@ public class ZooManagement {
         System.out.println("a" + myZoo.removeAnimal(dog));
         myZoo.displayAnimals();
 
-//        System.out.println(Zoo.comparerZoo(myZoo, notMyZoo));
-//        System.out.println(myZoo.isZooFull());
-        /*Aquatic aqua = new Aquatic();
-        Terrestrial terr =  new Terrestrial();
-        Dolphin dolphin = new Dolphin();
-        Penguin penguin = new Penguin();
-         */
         Aquatic aqua = new Aquatic("Fish", 2, false, "sea");
         Terrestrial terr = new Terrestrial("Insects","Ant",1,false,6);
-        Dolphin dolphin = new Dolphin("MrDolphin",3,true,"Ocean",15);
-        Penguin penguin = new Penguin("MrPenguin",5,false,"Greenland",10);
+        Dolphin dolphin = new Dolphin("DOF",3,true,"Iceland",15);
+        Penguin penguin = new Penguin("Pen",5,false,"Iceland",10);
 
         System.out.println(aqua);
         System.out.println(terr);
