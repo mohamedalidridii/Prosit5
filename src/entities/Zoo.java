@@ -6,12 +6,15 @@ public class Zoo {
     protected String name;
     protected String city;
     protected int nbrAnimals;
+    protected Aquatic[] aquaticAnimals;
+    protected int nbrAquatics;
 
     public Zoo() {
     }
 
     public Zoo(String name, String city) {
         animals = new Animal[NUMBER_OF_CAGES];
+        aquaticAnimals = new Aquatic[10];
         this.name = name;
         this.city = city;
     }
@@ -35,7 +38,10 @@ public class Zoo {
         nbrAnimals++;
         return true;
     }
-
+    public void addAquaticAnimal(Aquatic aquatic) {
+        aquaticAnimals[nbrAquatics] = aquatic;
+        nbrAquatics++;
+    }
     public boolean removeAnimal(Animal animal) {
         int indexAnimal = searchAnimal(animal);
         if (indexAnimal == -1)
@@ -77,6 +83,9 @@ public class Zoo {
         if (name.isEmpty()) return false;
         this.name = name;
         return true;
+    }
+    public Aquatic[] getAquaticAnimals() {
+        return aquaticAnimals;
     }
     public String getName() {return this.name;}
     public void setCity(String city) {this.city = city;}

@@ -1,6 +1,6 @@
 package entities;
 
-public class Aquatic extends Animal {
+public abstract non-sealed class Aquatic extends Animal {
     protected String habitat;
     public void setHabitat(String habitat) {this.habitat = habitat;}
     public String getHabitat() {return this.habitat;}
@@ -12,6 +12,7 @@ public class Aquatic extends Animal {
         this.habitat = habitat;
     }
     public Aquatic() {}
+    public abstract void swim();
 
     @Override
     public String toString() {
@@ -23,6 +24,7 @@ public class Aquatic extends Animal {
                 ", habitat='" + habitat + '\'' +
                 '}';
     }
+
     public void swim(){
         System.out.println("This aquatic animal is swimming.");
     }

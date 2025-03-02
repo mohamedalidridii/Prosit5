@@ -20,34 +20,41 @@ public class ZooManagement {
         Animal dog = new Animal("Rajhi", "Snoopy", 2, true);
 
 
-        System.out.println(myZoo.addAnimal(lion));
-        System.out.println(myZoo.addAnimal(dog));
+//        System.out.println(myZoo.addAnimal(lion));
+//        System.out.println(myZoo.addAnimal(dog));
 
-        myZoo.displayAnimals();
+        //      myZoo.displayAnimals();
 
-        System.out.println(myZoo.searchAnimal(dog));
+        //System.out.println(myZoo.searchAnimal(dog));
 
-        Animal dog2 = new Animal("Canine", "lll", 2, true);
+        //Animal dog2 = new Animal("Canine", "lll", 2, true);
 
-        System.out.println(myZoo.searchAnimal(dog2));
+        //System.out.println(myZoo.searchAnimal(dog2));
 
-        myZoo.displayAnimals();
+        //myZoo.displayAnimals();
 
 
-        System.out.println(myZoo);
+        //System.out.println(myZoo);
 
-        myZoo.addAnimal(lion);
-        myZoo.addAnimal(dog2);
-        myZoo.addAnimal(dog);
+        //myZoo.addAnimal(lion);
+        //myZoo.addAnimal(dog2);
+        //myZoo.addAnimal(dog);
 
-        myZoo.displayAnimals();
-        System.out.println("a" + myZoo.removeAnimal(lion));
-        myZoo.displayAnimals();
-        System.out.println("a" + myZoo.removeAnimal(dog2));
-        myZoo.displayAnimals();
-        System.out.println("a" + myZoo.removeAnimal(dog));
-        myZoo.displayAnimals();
-
+        //myZoo.displayAnimals();
+        //System.out.println("a" + myZoo.removeAnimal(lion));
+        //myZoo.displayAnimals();
+        //System.out.println("a" + myZoo.removeAnimal(dog2));
+        //myZoo.displayAnimals();
+        //System.out.println("a" + myZoo.removeAnimal(dog));
+        //myZoo.displayAnimals();
+        Dolphin d = new Dolphin();
+        d.setSwimmingSpeed(24.5f);
+        Dolphin d1 = new Dolphin();
+        d1.setSwimmingSpeed(21.8f);
+        Dolphin d2 = new Dolphin();
+        d2.setSwimmingSpeed(20.3f);
+        Dolphin d3 = new Dolphin();
+        d3.setSwimmingSpeed(22.6f);
         Aquatic aqua = new Aquatic("Fish", 2, false, "sea");
         Terrestrial terr = new Terrestrial("Insects","Ant",1,false,6);
         Dolphin dolphin = new Dolphin("DOF",3,true,"Iceland",15);

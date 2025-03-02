@@ -12,6 +12,8 @@ public class Dolphin extends Aquatic {
         this.habitat = habitat;
         this.swimmingSpeed = swimmingSpeed;
     }
+    public Dolphin() {
+    }
 
     @Override
     public String toString() {
