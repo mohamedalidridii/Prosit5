@@ -7,7 +7,7 @@ import exceptions.ZooFullException;
 public class ZooManagement {
 
     public static void main(String[] args) {
-        entities.Animal lion = new entities.Animal();
+        Animal lion = new Animal();
         lion.setName("Simba");
         try {
             lion.setAge(8);
@@ -17,11 +17,11 @@ public class ZooManagement {
         lion.setFamily("Cats");
         lion.setMammal(true);
 
-        entities.Zoo myZoo = new entities.Zoo("Wildlife Park", "Ariana");
-        entities.Zoo notMyZoo = new entities.Zoo("WaterPark", "Siliana");
+        Zoo myZoo = new Zoo("Wildlife Park", "Ariana");
+        Zoo notMyZoo = new Zoo("WaterPark", "Siliana");
 
 
-        entities.Animal dog = new entities.Animal("Canine", "Snoopy", 2, true);
+        Animal dog = new Animal("Canine", "Snoopy", 2, true);
 
 
         try {
@@ -42,7 +42,7 @@ public class ZooManagement {
         myZoo.displayAnimals();
 
         System.out.println(myZoo.searchAnimal(dog));
-        entities.Animal dog2 = new entities.Animal("Canine", "lll", 2, true);
+        Animal dog2 = new Animal("Canine", "lll", 2, true);
         System.out.println(myZoo.searchAnimal(dog2));
 
 //           System.out.println(myZoo.removeAnimal(dog));
@@ -61,13 +61,13 @@ public class ZooManagement {
 
         myZoo.displayAnimals();
 
-        entities.Dolphin d = new entities.Dolphin();
+        Dolphin d = new Dolphin();
         d.setSwimmingSpeed(24.5f);
-        entities.Dolphin d1 = new entities.Dolphin();
+        Dolphin d1 = new Dolphin();
         d1.setSwimmingSpeed(21.8f);
-        entities.Dolphin d2 = new entities.Dolphin();
+        Dolphin d2 = new Dolphin();
         d2.setSwimmingSpeed(20.3f);
-        entities.Dolphin d3 = new entities.Dolphin();
+        Dolphin d3 = new Dolphin();
         d3.setSwimmingSpeed(22.6f);
 
 
@@ -75,22 +75,22 @@ public class ZooManagement {
         myZoo.addAquaticAnimal(d1);
         myZoo.addAquaticAnimal(d2);
         myZoo.addAquaticAnimal(d3);
-        entities.Penguin p = new entities.Penguin();
+        Penguin p = new Penguin();
         p.setSwimmingDepth(24.6f);
-        entities.Penguin p1 = new entities.Penguin();
+        Penguin p1 = new Penguin();
         p1.setSwimmingDepth(29.6f);
-        entities.Penguin p2 = new entities.Penguin();
+        Penguin p2 = new Penguin();
         p2.setSwimmingDepth(219.6f);
-        entities.Penguin p3 = new entities.Penguin();
+        Penguin p3 = new Penguin();
         p1.setSwimmingDepth(2.6f);
         myZoo.addAquaticAnimal(p);
         myZoo.addAquaticAnimal(p1);
         myZoo.addAquaticAnimal(p2);
         myZoo.addAquaticAnimal(p3);
-        myZoo.addAquaticAnimal(new entities.Penguin());
+        myZoo.addAquaticAnimal(new Penguin());
 
         for (int i = 0; i < myZoo.getNbrAquatics(); i++) {
-            entities.Aquatic[] aquatics = myZoo.getAquaticAnimals();
+            Aquatic[] aquatics = myZoo.getAquaticAnimals();
             aquatics[i].swim();
         }
 
