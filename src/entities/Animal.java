@@ -1,6 +1,6 @@
 package entities;
 
-public sealed class Animal permits tn.esprit.gestionzoo.entities.Aquatic, tn.esprit.gestionzoo.entities.Terrestrial {
+public sealed class Animal permits entities.Aquatic, entities.Terrestrial {
 
     private String family, name;
     private int age;
