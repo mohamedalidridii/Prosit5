@@ -1,4 +1,4 @@
-package tn.esprit.gestionzoo.entities;
+package entities;
 
 public class Penguin extends Aquatic {
 

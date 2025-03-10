@@ -1,4 +1,4 @@
-package tn.esprit.gestionzoo.entities;
+package entities;
 
 public sealed class Animal permits tn.esprit.gestionzoo.entities.Aquatic, tn.esprit.gestionzoo.entities.Terrestrial {
 

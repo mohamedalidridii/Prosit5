@@ -1,4 +1,4 @@
-package tn.esprit.gestionzoo.entities;
+package entities;
 
 public final class Terrestrial extends Animal {
 
