@@ -1,29 +1,32 @@
-package entities;
+package tn.esprit.gestionzoo.entities;
 
 public abstract non-sealed class Aquatic extends Animal {
+
     protected String habitat;
-    public void setHabitat(String habitat) {this.habitat = habitat;}
-    public String getHabitat() {return this.habitat;}
-    public Aquatic(String name, int age, boolean isMammal, String habitat) {
-        this.family = "Aquatic";
-        this.name = name;
-        this.age = age;
-        this.isMammal = isMammal;
+
+    public Aquatic() {
+    }
+
+    public Aquatic(String family, String name, int age, boolean isMammal, String habitat) {
+        super(family, name, age, isMammal);
         this.habitat = habitat;
     }
-    public Aquatic() {}
+
+
     public abstract void swim();
 
     @Override
     public String toString() {
-        return "Aquatic{" +
-                "family='" + family + '\'' +
-                ", name='" + name + '\'' +
-                ", age=" + age +
-                ", isMammal=" + isMammal +
-                ", habitat='" + habitat + '\'' +
-                '}';
+        return super.toString() + ", habitat:" + habitat;
     }
 
-
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == this) return true;
+        if (obj == null) return false;
+        if (obj instanceof Aquatic aquatic) {
+            return aquatic.habitat.equals(habitat) && aquatic.getName().equals(super.getName()) && aquatic.getAge() == super.getAge();
+        }
+        return false;
+    }
 }

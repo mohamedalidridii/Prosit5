@@ -1,13 +1,13 @@
-package entities;
-public class Animal {
+package tn.esprit.gestionzoo.entities;
 
-    protected String family, name;
-    protected int age;
-    protected boolean isMammal;
+public sealed class Animal permits tn.esprit.gestionzoo.entities.Aquatic, tn.esprit.gestionzoo.entities.Terrestrial {
+
+    private String family, name;
+    private int age;
+    private boolean isMammal;
 
 
     public Animal() {
-
     }
 
     public Animal(String family, String name, int age, boolean isMammal) {
@@ -17,26 +17,45 @@ public class Animal {
         this.isMammal = isMammal;
     }
 
+
+    public String getFamily() {
+        return family;
+    }
+
+    public void setFamily(String family) {
+        this.family = family;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        if (age < 0)
+            System.out.println("The age must a positive number");
+        else
+            this.age = age;
+    }
+
+    public boolean isMammal() {
+        return isMammal;
+    }
+
+    public void setMammal(boolean mammal) {
+        isMammal = mammal;
+    }
+
+
     @Override
     public String toString() {
-        return "Animal{" +
-                "family='" + family + '\'' +
-                ", name='" + name + '\'' +
-                ", age=" + age +
-                ", isMammal=" + isMammal +
-                '}';
+        return "Animal{ Family:" + family + ", Name: " + name + ", Age: " + age + ", isMammal: " + isMammal + "}";
     }
-    public boolean setAge(int age) {
-        if (age < 0) return false;
-        this.age = age;
-        return true;
-    }
-    public int getAge() {return age;}
-    public void setName(String name) {this.name = name;}
-    public String getName() {return name;}
-    public void setFamily(String family) {this.family = family;}
-    public String getFamily() {return family;}
-    public void setIsMammal(boolean isMammal) {this.isMammal = isMammal;}
-    public boolean getIsMammal() {return isMammal;}
 }
-
